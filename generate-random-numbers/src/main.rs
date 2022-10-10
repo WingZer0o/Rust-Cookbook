@@ -1,3 +1,15 @@
+use rand::Rng;
+
 fn main() {
-    println!("Hello, world!");
+    generate_random_numbers();
+}
+
+
+fn generate_random_numbers() {
+    let mut rng = rand::thread_rng();
+
+    let n1: u8 = rng.gen();
+    let n2: u16 = rng.gen();
+    println!("Random u8: {}", n1);
+    println!("Random u16: {}", n2);
 }
