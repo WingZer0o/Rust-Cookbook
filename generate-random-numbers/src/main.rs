@@ -3,12 +3,14 @@ use rand::Rng;
 use crate::random_values_custom_type::Point;
 mod distribution_numbers;
 mod random_values_custom_type;
+mod random_passwords;
 
 fn main() {
     generate_random_numbers();
     generate_random_numbers_in_range();
     distribution_numbers::generate_numbers_in_distribution();
     generate_random_values();
+    random_passwords::generate_random_passwords();
 }
 
 
