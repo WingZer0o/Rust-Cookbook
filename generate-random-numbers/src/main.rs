@@ -10,7 +10,8 @@ fn main() {
     generate_random_numbers_in_range();
     distribution_numbers::generate_numbers_in_distribution();
     generate_random_values();
-    random_passwords::generate_random_passwords();
+    random_passwords::generate_random_password();
+    random_passwords::generate_user_defined_password();
 }
 
 
