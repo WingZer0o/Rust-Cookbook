@@ -1,10 +1,14 @@
 use rand::Rng;
+
+use crate::random_values_custom_type::Point;
 mod distribution_numbers;
+mod random_values_custom_type;
 
 fn main() {
     generate_random_numbers();
     generate_random_numbers_in_range();
     distribution_numbers::generate_numbers_in_distribution();
+    generate_random_values();
 }
 
 
@@ -24,4 +28,12 @@ fn generate_random_numbers_in_range() {
     let mut rng = rand::thread_rng();
     println!("Integer: {}", rng.gen_range(0..10));
     println!("Float: {}", rng.gen_range(0.0..10.0));
+}
+
+fn generate_random_values() {
+    let mut rng = rand::thread_rng();
+    let rand_tuple = rng.gen::<(i32, bool, f64)>();
+    let rand_point: Point = rng.gen();
+    println!("Random tuple: {:?}", rand_tuple);
+    println!("Random Point: {:?}", rand_point);
 }
