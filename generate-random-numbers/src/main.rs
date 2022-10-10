@@ -1,8 +1,10 @@
 use rand::Rng;
+mod distribution_numbers;
 
 fn main() {
     generate_random_numbers();
     generate_random_numbers_in_range();
+    distribution_numbers::generate_numbers_in_distribution();
 }
 
 
