@@ -2,6 +2,7 @@ use rand::Rng;
 
 fn main() {
     generate_random_numbers();
+    generate_random_numbers_in_range();
 }
 
 
@@ -12,4 +13,13 @@ fn generate_random_numbers() {
     let n2: u16 = rng.gen();
     println!("Random u8: {}", n1);
     println!("Random u16: {}", n2);
+    println!("Random u32: {}", rng.gen::<u32>());
+    println!("Random i32: {}", rng.gen::<i32>());
+    println!("Random float: {}", rng.gen::<f64>());
+}
+
+fn generate_random_numbers_in_range() {
+    let mut rng = rand::thread_rng();
+    println!("Integer: {}", rng.gen_range(0..10));
+    println!("Float: {}", rng.gen_range(0.0..10.0));
 }
