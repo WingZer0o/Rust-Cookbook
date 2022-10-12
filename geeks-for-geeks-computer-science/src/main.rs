@@ -1,15 +1,8 @@
-use array::sort_array;
-
 mod array;
 
-fn main() {
-    sort_i64_boxed_array();
-}
+use array::sort_arrayi32_choice;
 
-fn sort_i64_boxed_array() {
+fn main() {
     let newArray = Box::new([10, 25, 1, 5, 90, 55, 14]);
-    let sorted = sort_array(newArray);
-    for x in sorted.iter() {
-        println!("{}", x);
-    }
+    sort_arrayi32_choice(newArray, false);
 }
